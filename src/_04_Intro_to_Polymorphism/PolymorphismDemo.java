@@ -46,7 +46,7 @@ public class PolymorphismDemo {
          * declared as an Animal on the left side.
          */
 
-        Animal animal = new Animal();
+        // *** UNCOMMENT LATERAnimal animal = new Animal();
 
         /*
          * 2. Call the speak method and run the program.

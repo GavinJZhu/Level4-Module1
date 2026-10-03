@@ -1,5 +1,7 @@
 package _00_Intro_to_Exceptions;
 
+import javax.swing.*;
+
 public class ExceptionsDemo {
 
     /*
@@ -22,7 +24,7 @@ public class ExceptionsDemo {
 
     /*
      * This is also known as a checked exception. Normally these only occur when
-     * an issue outside of your code's control could occur.
+     * an issue outside your code's control could occur.
      * 
      * You may have encountered this when trying to load images or when using
      * Thread.Sleep to pause your program since they rely on external factors of
@@ -39,12 +41,29 @@ public class ExceptionsDemo {
     public static void main(String[] args) {
 
         // 1. Create a try/catch block (Hint: type "try" and ctrl + space).
-
+        try {
+            testFiveOrGreater(2);
+        }
         /*
          * 2. Call the testFiveOrGreater method with a value less than 5 inside
          * the try block.
          */
+        catch (Exception e) {
+            e.printStackTrace();
+        }
 
+
+        try {
+            testPositive(-2);
+        }
+
+        catch (NegativeNumberException e) {
+            e.scaryPopup();
+        }
+
+        finally {
+            JOptionPane.showMessageDialog(null,"Your actual computer is fine, just close this window. (Or hit OK)");
+        }
         /*
          * 3. Call e.printStackTrace() in the catch block. This prints out the
          * last methods called during your program's execution to the console in
@@ -63,13 +82,17 @@ public class ExceptionsDemo {
      * JOptionPane Message Dialog telling the user they have triggered a
      * critical error in their computer.
      */
-
+    static void testPositive(int x) throws NegativeNumberException {
+        if (x < 0) {
+            throw new NegativeNumberException();
+        }
+    }
     /*
      * 7. Create a static method in this class called testPositive. It should
      * take a single number as a parameter and throw a NegativeNumberException
      * if that number is negative.
      * 
-     * 8. Call the testPositive method with a negative number inside of a the
+     * 8. Call the testPositive method with a negative number inside the
      * main method. Make sure your catch block can catch a
      * NegativeNumberException.
      * 
