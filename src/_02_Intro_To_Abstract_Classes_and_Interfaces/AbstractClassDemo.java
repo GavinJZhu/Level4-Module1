@@ -46,7 +46,3 @@ public abstract class AbstractClassDemo {
 
 }
 
-/*
- * 1. Create a class that extends the AbstractClassDemo class and implement its
- * methods.
- */
