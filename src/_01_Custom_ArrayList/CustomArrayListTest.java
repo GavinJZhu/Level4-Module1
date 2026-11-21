@@ -3,7 +3,6 @@ package _01_Custom_ArrayList;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 //Complete the ArrayList class using the generic to make the tests pass.
 
 public class CustomArrayListTest {
@@ -27,7 +26,7 @@ public class CustomArrayListTest {
 		list.add("ONE");
 		list.add("TWO");
 		list.add("THREE");
-		
+
 		list.set(2, "PICKLES");
 		
 		if(!list.get(0).equals("TESTER")) fail("list.get(0) returning improper value.");
@@ -112,15 +111,14 @@ public class CustomArrayListTest {
 		list.add("only");
 		list.add("a");
 		list.add("test");
-
-		//assertTrue(list.size() == 5);
+		assertTrue(list.size() == 5);
 		
 		ArrayList<Integer> list2 = new ArrayList<Integer>();
 		list2.add(0);
 		list2.add(1);
 		list2.add(206);
 		
-		//assertTrue(list2.size() == 3);
+		assertTrue(list2.size() == 3);
 	}
 	
 	@Test
@@ -132,11 +130,11 @@ public class CustomArrayListTest {
 		list.add("a");
 		list.add("test");
 		
-		//assertTrue(list.size() == 5);
+		assertTrue(list.size() == 5);
 		
 		list.remove(0);
 		list.remove(0);
 		
-		//assertTrue(list.size() == 3);
+		assertTrue(list.size() == 3);
 	}
 }
